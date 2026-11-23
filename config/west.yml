@@ -71,5 +71,13 @@ manifest:
       revision: d9490e7b5d41c516221d131241009e81740efcee
       import: true
 
+    - name: zmk-feature-default-layer
+      remote: cormoran
+      revision: b25cb5b324da2d9bbc84e1877c775f5b2b7c6845
+
+    - name: zmk-feature-os-detection
+      remote: cormoran
+      revision: 3052679f645b8fc1997275c2eaa6b86bdd55ca01
+
   self:
     path: config
