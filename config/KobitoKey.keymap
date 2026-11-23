@@ -12,6 +12,14 @@
 
 / {
     behaviors {
+        mouse_exit: mouse_exit {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+            display-name = "Exit Mouse Layer";
+            locking;
+        };
+
         // Keep the original key_press behavior for ZMK core components
 
         original_key_press: original_key_press {
@@ -105,7 +113,7 @@
 &trans  &trans  &trans  &trans  &trans                 &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans                 &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans                 &trans  &trans    &trans    &trans    &trans
-&trans  &trans          &trans  &trans  &to 0  &trans  &trans  &trans              &to 0     &trans
+&trans  &trans          &trans  &trans  &mouse_exit 3  &trans  &trans  &trans              &mouse_exit 3     &trans
             >;
         };
 
@@ -116,6 +124,16 @@
 &trans        &trans        &trans        &trans        &bt BT_CLR_ALL                  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans
 &trans        &trans                      &trans        &trans          &trans  &trans  &trans  &trans          &trans  &trans
+            >;
+        };
+
+        OS_BASE {
+            label = "OS Base";
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
