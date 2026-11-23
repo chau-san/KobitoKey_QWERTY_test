@@ -101,8 +101,9 @@
 
 &scroll_runtime_input_processor_l {
         processor-label = "ScrL";
-        x-codes = <INPUT_REL_X>;
-        y-codes = <INPUT_REL_Y>;
+        /* The left listener maps motion to wheel events before this processor. */
+        x-codes = <INPUT_REL_HWHEEL>;
+        y-codes = <INPUT_REL_WHEEL>;
         xy-to-scroll-enabled;
 };
 
