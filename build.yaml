@@ -1,11 +1,11 @@
 include:
- - board: seeeduino_xiao_ble
+ - board: xiao_ble//zmk
    shield: KobitoKey_left rgbled_adapter
    snippet: zmk-usb-logging studio-rpc-usb-uart
    
- - board: seeeduino_xiao_ble
+ - board: xiao_ble//zmk
    shield: KobitoKey_right rgbled_adapter
    snippet: zmk-usb-logging
 
- - board: seeeduino_xiao_ble
+ - board: xiao_ble//zmk
    shield: settings_reset
